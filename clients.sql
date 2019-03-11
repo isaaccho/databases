@@ -9,18 +9,26 @@
     student_id INT,\
     name VARCHAR(20),\
     major VARCHAR(20),\
-    PRIMARY KEY(student_id) #this will set the primary key, in this case student_id\
+    PRIMARY KEY(student_id) -- this will set the primary key, in this case student_id\
 );\
 \
 DESCRIBE student; \
 \
 \
-DROP TABLE student; #this will delete the table 'student'\
+DROP TABLE student; -- this will delete the table 'student'\
 \
 \
-ALTER TABLE student add gpa DECIMAL(3,2); #this alters the table student and adds gpa column\
+ALTER TABLE student add gpa DECIMAL(3,2); -- this alters the table student and adds gpa column\
 \
-ALTER TABLE student DROP column gpa; #can also drop a specific column\
+ALTER TABLE student DROP column gpa; -- can also drop a specific column\
+\
+INSERT INTO student VALUES(1,'Arnold','business'); -- inserting data into the table\
+INSERT INTO student VALUES(2,'Emily','Computer Science'); \
+INSERT INTO student VALUES(3,'Mark','business');\
+INSERT INTO student(student_id,name) VALUES(4,'Laura'); -- can specify which data you want to add\
+\
+\
+SELECT * FROM student; -- show all the information inside student\
 \
 \
 \
